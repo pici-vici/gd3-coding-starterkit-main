@@ -1,17 +1,3 @@
-@font-face {
-  font-family: SinistreDark;
-  src: url(../fonts/Sinistre-Dark.woff2);
-  /*by Jules Durand*/
-}
-@font-face {
-  font-family: SinistreBold;
-  src: url(../fonts/Sinistre-Bold.woff2);
-}
-@font-face {
-  font-family: Sinistre;
-  src: url(../fonts/Sinistre-Regular.woff2);
-}
-
 body {
   background-color: #222222;
   background-image: url("../images/Background.gif");
@@ -85,11 +71,7 @@ ul{
 li {
   display: inline;
 }
-a {
-  margin: -10px;
-  color:#ffffff;
-  padding: 10px;
-}
+
 img.nav {
   max-width: 50px;
   height: auto;
@@ -133,6 +115,14 @@ p.val {
   border: #66cc33, 25px;
   border-radius: 50px;
   border-left-style: solid;
+}
+p.description{
+  /*font-family: Sinistre;*/
+  margin-left: 10px;
+  margin-top: -5px;
+  font-size: 16px;
+  color:#66cc33;
+
 }
 
 
@@ -179,13 +169,10 @@ justify-content: space-around;
 .slideshow {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 74px);
   overflow: hidden;
 }
 
-input[type="radio"] {
-  display: none;
-}
 
 .slide {
   position: absolute;
@@ -194,13 +181,12 @@ input[type="radio"] {
   background-size: contain;
   background-position: bottom center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 1s ease;
   pointer-events: none;
   background-repeat: no-repeat;
   /*border:#330066, solid, 20px;*/
   padding: 50px;
 }
-
 /* Show only the currently selected slide */
 #step1:checked ~ .slideshow .img1,
 #step2:checked ~ .slideshow .img2,
@@ -213,11 +199,61 @@ input[type="radio"] {
   pointer-events: auto;
 }
 
-.click-area {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+
+
+.radio {
+   all: unset;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #663399;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    display:none;
 }
 
+#step1:checked ~ #step2,
+#step2:checked ~ #step3,
+#step3:checked ~ #step4,
+#step4:checked ~ #step5,
+#step5:checked ~ #step6,
+#step6:checked ~ #step7 {
+  display: block;
+}
+
+
+.radio:checked {
+  display: none !important;
+}
+
+
+#step1 {
+  display: none;
+}
+
+#step2 {
+    top: 20%;
+    left: 49%;
+}
+#step3 {
+    top: 43%;
+    left: 48%;
+}
+#step4 {
+    top: 80%;
+    left: 48%;
+}
+#step5 {
+    top: 60%;
+    left: 30%;
+}
+#step6 {
+    top: 64%;
+    left: 65%;
+}
+#step7 {
+    top: 63%;
+    left: 49%;
+}
 
