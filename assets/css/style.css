@@ -1,20 +1,20 @@
 @font-face {
   font-family: SinistreDark;
-  src: url(/assets/fonts/Sinistre-Dark.woff2);
+  src: url(../fonts/Sinistre-Dark.woff2);
   /*by Jules Durand*/
 }
 @font-face {
   font-family: SinistreBold;
-  src: url(/assets/fonts/Sinistre-Bold.woff2);
+  src: url(../fonts/Sinistre-Bold.woff2);
 }
 @font-face {
   font-family: Sinistre;
-  src: url(/assets/fonts/Sinistre-Regular.woff2);
+  src: url(../fonts/Sinistre-Regular.woff2);
 }
 
 body {
   background-color: #222222;
-  background-image: url("/assets/images/Background.gif");
+  background-image: url("../images/Background.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -22,15 +22,15 @@ body {
 }
 body.book {
   background-color: #330000;
-  background-image: url("/assets/images/Book-Background.gif");
+  background-image: url("../images/Book-Background.gif");
 }
 body.interview {
   background-color: #003300;
-  background-image: url("/assets/images/Interview-Background.gif");
+  background-image: url("../images/Interview-Background.gif");
 }
 body.ritual {
   background-color:#190031;
-  background-image: url("/assets/images/Ritual-Background.gif");
+  background-image: url("../images/Ritual-Background.gif");
 } 
 
 
