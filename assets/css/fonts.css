@@ -5,3 +5,17 @@
   font-display: auto;
   src: url("../fonts/ABCRepro-Medium-Trial.woff") format("woff"), url("../fonts/ABCRepro-Medium-Trial.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: SinistreDark;
+  src: url(../fonts/Sinistre-Dark.woff2);
+  /*by Jules Durand*/
+}
+@font-face {
+  font-family: SinistreBold;
+  src: url(../fonts/Sinistre-Bold.woff2);
+}
+@font-face {
+  font-family: Sinistre;
+  src: url(../fonts/Sinistre-Regular.woff2);
+}
