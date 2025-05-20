@@ -1,0 +1,223 @@
+@font-face {
+  font-family: SinistreDark;
+  src: url(/assets/fonts/Sinistre-Dark.woff2);
+  /*by Jules Durand*/
+}
+@font-face {
+  font-family: SinistreBold;
+  src: url(/assets/fonts/Sinistre-Bold.woff2);
+}
+@font-face {
+  font-family: Sinistre;
+  src: url(/assets/fonts/Sinistre-Regular.woff2);
+}
+
+body {
+  background-color: #222222;
+  background-image: url("/assets/images/Background.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+body.book {
+  background-color: #330000;
+  background-image: url("/assets/images/Book-Background.gif");
+}
+body.interview {
+  background-color: #003300;
+  background-image: url("/assets/images/Interview-Background.gif");
+}
+body.ritual {
+  background-color:#190031;
+  background-image: url("/assets/images/Ritual-Background.gif");
+} 
+
+
+h1 {
+  font-family: SinistreDark;
+  margin: 20px;
+  padding: 20px;
+  font-size: 100px;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  border: solid, 25px;
+  border-radius: 50px;
+  border-color: #6f6f6f;
+}
+h1.book {
+  border-color: #990000;
+}
+h1.interview {
+  border-color: #66cc33;
+  /*border-style: dotted;*/
+}
+h1.ritual {
+  color: #330066;
+  border-color: #330066;
+}
+
+h2 {
+  font-family: Sinistre;
+  margin: 30px;
+  font-size: 44px;
+  color:rgb(255, 255, 255);
+  text-align: left;
+  line-height: 1.2;
+}
+
+p {
+  font-family: SinistreBold;
+  margin: 20px;
+  font-size: 22px;
+  color:#ffffff;
+  text-align: left;
+  line-height: 1.2;
+  hyphens: auto;
+}
+
+ul{
+  margin-top: 20px;
+  padding: 15px;
+  justify-self: center;
+}
+li {
+  display: inline;
+}
+a {
+  margin: -10px;
+  color:#ffffff;
+  padding: 10px;
+}
+img.nav {
+  max-width: 50px;
+  height: auto;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+p.book {
+  padding: 5px;
+  border: solid, 15px, #990000;
+  border-radius: 15px;
+  background-color: black;
+}
+p.meow {margin: auto; color: #ffcccc;}
+
+p.BIGbook {
+  font-family: SinistreBold;
+  font-size: 44px;
+  color: #ffcccc;
+  line-height: 1.2;
+  text-align: center;
+  margin: auto;
+  padding: 25px;
+
+}
+
+p.vic {
+  /*font-style: italic;*/
+  font-family: Sinistre;
+  color: #66cc33;
+  margin: 0px;
+  padding: 10px;
+  border: black, 25px;
+  border-radius: 15px;
+  border-style: solid;
+  background-color: black;
+}
+p.val {
+  margin: 0px;
+  padding: 20px;
+  border: #66cc33, 25px;
+  border-radius: 50px;
+  border-left-style: solid;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+ padding: 10px;
+}
+
+
+
+.flex-container {
+  display: flex;
+justify-content: space-around;
+}
+
+.grid-containerBook {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1em;
+   margin-left: 30px;
+   margin-right: 30px;
+}
+.book-scan {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+}
+
+.grid-containerInterview {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2em;
+ /* border: solid, 5px, white;
+ grid-template-rows: 1fr 2fr 1fr;*/
+   margin-left: 120px;
+   margin-right: 120px;
+
+}
+
+
+
+
+.slideshow {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: bottom center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  /*border:#330066, solid, 20px;*/
+  padding: 50px;
+}
+
+/* Show only the currently selected slide */
+#step1:checked ~ .slideshow .img1,
+#step2:checked ~ .slideshow .img2,
+#step3:checked ~ .slideshow .img3,
+#step4:checked ~ .slideshow .img4,
+#step5:checked ~ .slideshow .img5,
+#step6:checked ~ .slideshow .img6,
+#step7:checked ~ .slideshow .img7 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.click-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
