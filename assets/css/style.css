@@ -84,13 +84,23 @@ p.blurb {
   border: #336699, 25px;
   border-radius: 50px;
   border-left-style: solid;
+  border-right-style: solid;
+  /*background-color: black;*/
 }
 
 p.book {
-  padding: 5px;
-  border: solid, 15px, #990000;
+  padding: 15px;
+  border: 15px, #990000;
   border-radius: 30px;
+  border-left-style: solid;
+  border-right-style: solid;
   background-color: black;
+}
+.context{
+
+}
+.opinion{
+
 }
 p.meow {margin: auto; color: #ffcccc;}
 
