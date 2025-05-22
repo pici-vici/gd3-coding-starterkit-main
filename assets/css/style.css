@@ -75,7 +75,7 @@ p {
   font-size: 22px;
   color:#ffffff;
   text-align: left;
-  line-height: 1.2;
+  line-height: 1.25;
   hyphens: auto;
 }
 
@@ -86,6 +86,11 @@ p.blurb {
   border-left-style: solid;
   border-right-style: solid;
   /*background-color: black;*/
+}
+p.colophon {
+  font-family: Sinistre;
+  margin: auto;
+  /*padding: 20px;*/
 }
 
 p.book {
