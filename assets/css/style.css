@@ -53,16 +53,6 @@ h2 {
   line-height: 1.2;
 }
 
-p {
-  font-family: SinistreBold;
-  margin: 20px;
-  font-size: 22px;
-  color:#ffffff;
-  text-align: left;
-  line-height: 1.2;
-  hyphens: auto;
-}
-
 ul{
   margin-top: 20px;
   padding: 15px;
@@ -79,10 +69,27 @@ img.nav {
   margin-top: 20px;
 }
 
+p {
+  font-family: SinistreBold;
+  margin: 20px;
+  font-size: 22px;
+  color:#ffffff;
+  text-align: left;
+  line-height: 1.2;
+  hyphens: auto;
+}
+
+p.blurb {
+  padding: 20px;
+  border: #336699, 25px;
+  border-radius: 50px;
+  border-left-style: solid;
+}
+
 p.book {
   padding: 5px;
   border: solid, 15px, #990000;
-  border-radius: 15px;
+  border-radius: 30px;
   background-color: black;
 }
 p.meow {margin: auto; color: #ffcccc;}
@@ -176,6 +183,12 @@ img {
 }
 
 
+.grid-containerHome {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  column-gap: 2em;
+   margin-top: 20px;
+}
 
 .grid-containerBook {
   display: grid;
