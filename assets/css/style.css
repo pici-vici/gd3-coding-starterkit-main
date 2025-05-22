@@ -263,7 +263,7 @@ img {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: #663399;
+    background: #9966ff;
     border-radius: 50%;
     z-index: 2;
     cursor: pointer;
@@ -286,7 +286,7 @@ img {
 }
 #step2 {
     top: 20%;
-    left: 49%;
+    left: 48%;
 }
 #step3 {
     top: 43%;
@@ -297,12 +297,12 @@ img {
     left: 48%;
 }
 #step5 {
-    top: 60%;
+    top: 63%;
     left: 30%;
 }
 #step6 {
-    top: 64%;
-    left: 65%;
+    top: 63%;
+    right: 33%;
 }
 #step7 {
     top: 63%;
