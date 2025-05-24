@@ -19,6 +19,13 @@ body.ritual {
   background-image: url("../images/Ritual-Background.gif");
 } 
 
+img.nav {
+  max-width: 50px;
+  height: auto;
+  padding: 0px;
+  margin-top: 20px;
+
+}
 
 h1 {
   font-family: SinistreDark;
@@ -26,8 +33,9 @@ h1 {
   font-size: 100px;
   color:rgb(255, 255, 255);
   text-align: center;
-  border: solid, 44px;
-  border-radius: 25% 20px;
+  border: solid, 25px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
   /*border-radius: 25%;*/
   border-color: #336699;
   grid-column: span 3;
@@ -63,22 +71,6 @@ h2.book {
     margin-top: 10px;
 }
 
-ul{
-  margin-top: 20px;
-  padding: 15px;
-  justify-self: center;
-}
-li {
-  display: inline;
-}
-
-img.nav {
-  max-width: 50px;
-  height: auto;
-  padding: 0px;
-  margin-top: 20px;
-}
-
 p {
   font-family: SinistreBold;
   margin: 20px;
@@ -90,32 +82,35 @@ p {
 }
 
 p.blurb {
-  padding: 20px;
+  padding: 15px;
   border: #336699, 25px;
   border-radius: 50px;
+  border-bottom-style: solid;
   border-left-style: solid;
-  border-right-style: solid;
-  /*background-color: black;*/
 }
 p.colophon {
   font-family: Sinistre;
   margin: auto;
-  /*padding: 20px;*/
+  padding-bottom: 20px;
 }
 
 p.book {
   padding: 15px;
-  border: 15px, #cc0000;
-  border-radius: 30px;
-  border-left-style: solid;
-  border-right-style: solid;
+  border: 25px, #cc0000;
+  border-radius: 50px;
   background-color: black;
 }
-.context{
+p.context{
 grid-column: 2;
+border-top-left-radius: 0px;
+border-bottom-style: solid;
+border-right-style: solid;
 }
-.opinion{
+p.opinion{
 grid-column: 4;
+border-top-right-radius: 0px;
+border-bottom-style: solid;
+border-left-style: solid;
 }
 p.meow {margin: auto; color: #ffcccc; text-align: center;
 }
@@ -133,21 +128,25 @@ p.BIGbook {
 
 p.vic {
   /*font-style: italic;*/
+  margin: 0px;
+  margin-top: 30px;
   font-family: Sinistre;
   color: #66cc33;
-  margin: 0px;
-  padding: 10px;
+  padding: 0px;
   border: black, 25px;
-  border-radius: 15px;
+  /*border-radius: 50px;*/
   border-style: solid;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
   background-color: black;
   grid-column: 2;
 }
 p.val {
   margin: 0px;
-  padding: 20px;
+  padding: 15px;
   border: #66cc33, 25px;
   border-radius: 50px;
+  border-bottom-style: solid;
   border-left-style: solid;
   grid-column: 3;
 }
@@ -228,19 +227,17 @@ div.image-toggle{
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   column-gap: 2em;
-   margin-top: 20px;
+  margin-top: 20px;
 }
 
 .grid-containerBook {
   display: grid;
   grid-template-columns: 10px 1fr 1fr 1fr 10px;
   column-gap: 1em;
-   /*margin-left: 30px;
-   margin-right: 30px;*/
 }
 .book-scan {
   grid-column: span 5;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 30px;
   margin-left: 150px;
   margin-right: 150px;
@@ -249,16 +246,13 @@ div.image-toggle{
 }
 .book-img {
   align-self: center;
-  max-width: 50%;
-  max-height: auto;
+  
 }
 
 .grid-containerInterview {
   display: grid;
   grid-template-columns: 90px 1fr 2fr 90px;
   column-gap: 2em;
-   /*margin-left: 120px;
-   margin-right: 120px;*/
 }
 
 
@@ -278,10 +272,9 @@ div.image-toggle{
   transition: opacity 1s ease;
   pointer-events: none;
   background-repeat: no-repeat;
-  /*border:#330066, solid, 20px;*/
   padding: 50px;
 }
-/* Show only the currently selected slide */
+
 #step1:checked ~ .slideshow .img1,
 #step2:checked ~ .slideshow .img2,
 #step3:checked ~ .slideshow .img3,
@@ -304,47 +297,22 @@ div.image-toggle{
     cursor: pointer;
     display:none;
 }
-.radio:hover {
-  filter: brightness(0.7);
-}
+.radio:hover {filter: brightness(0.7);}
 
 #step1:checked ~ #step2,
 #step2:checked ~ #step3,
 #step3:checked ~ #step4,
 #step4:checked ~ #step5,
 #step5:checked ~ #step6,
-#step6:checked ~ #step7 {
-  display: block;
-}
+#step6:checked ~ #step7 {display: block;}
 
-.radio:checked {
-  display: none !important;
-}
-#step1 {
-  display: none;
-}
-#step2 {
-    top: 20%;
-    left: 48%;
-}
-#step3 {
-    top: 43%;
-    left: 48%;
-}
-#step4 {
-    top: 80%;
-    left: 48%;
-}
-#step5 {
-    top: 63%;
-    left: 30%;
-}
-#step6 {
-    top: 63%;
-    right: 33%;
-}
-#step7 {
-    top: 63%;
-    left: 49%;
-}
+.radio:checked {display: none !important;}
+
+#step1 {display: none;}
+#step2 {top: 20%; left: 48%;}
+#step3 {top: 43%; left: 48%;}
+#step4 {top: 80%; left: 48%;}
+#step5 {top: 63%; left: 30%;}
+#step6 {top: 63%; right: 33%;}
+#step7 {top: 63%; left: 49%;}
 
